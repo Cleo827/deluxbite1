@@ -1,0 +1,555 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+/* LOGO & NAVIGATION */
+.logo-nav-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* space between logo and nav */
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+.logo {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: darkorange;
+}
+
+/* FEEDBACK LINK STYLE */
+.feedback-link {
+    border: 2px solid goldenrod;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: black;
+    background-color: goldenrod;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero-section {
+    padding-top: 140px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 8px #ff00ff, 0 0 12px #ff00ff;
+    animation: glowZoom 3s ease-in-out infinite;
+}
+
+@keyframes glowZoom {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #ff00ff;
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 20px #ff00ff;
+    }
+}
+
+.hero-section h2 {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin: 20px auto;
+    max-width: 700px;
+    color: #ccc;
+}
+
+/* ORDER BUTTON */
+.order-button {
+    background-color: goldenrod;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 20px auto 0;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: white;
+    color: goldenrod;
+    border-color: goldenrod;
+    transform: scale(1.05);
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-size: 2.2rem;
+    color: goldenrod;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+/* IMAGE GALLERY (like phone gallery) */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 5px;
+    padding: 20px 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: black;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: goldenrod;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    text-align: left;
+    color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: goldenrod;
+    box-shadow: 0 0 5px rgba(218, 165, 32, 0.5);
+}
+
+.contact-form button {
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: darkorange;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 200px) {
+    .logo-nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+
+
+.contact-address {
+    font-size: 2rem;
+    color: goldenrod;
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color:white;
+    color: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+.pricing-section {
+    padding: 60px 20px;
+    
+    text-align: center;
+  }
+  
+  .pricing-title {
+    font-size: 2.5rem;
+    color: goldenrod;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .menu-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .menu-table thead {
+    background-color: goldenrod;
+    color: black
+  }
+  
+  .menu-table th, .menu-table td {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: black;
+  }
+  
+  .menu-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .menu-table tr:hover {
+    background-color: #ffeccc;
+  }
+  
+  .order-button {
+    background-color: goldenrod;
+    color: black;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .order-button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+  }
+  
+  
+/* Order Form Styles */
+.order-form {
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 30px 20px;
+    background: black;
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .order-form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: goldenrod;
+  }
+  
+  .order-form input,
+  .order-form select,
+  .order-form textarea {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .order-form button {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .order-form button:hover {
+    background: #cf711f;
+  }
+
+  .place-order {
+    background-color: white;
+    color: black;
+    max-width: 100%;
+    padding: 10px 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .place-order-sub {
+    
+    color: goldenrod;
+    padding: 10px 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Reservation Section */
+  .reservation-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .reservation-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .reservation-text {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+  }
+  
+  .interior-image {
+    width: 220px;
+    max-width: 90vw;
+    margin: 10px 8px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .reservation-button-container {
+    margin-top: 28px;
+  }
+  
+  .reservation-button {
+    display: inline-block;
+    background-color: orange;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .reservation-button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+  }
+  
+  .reservation-title {
+    font-size: 2.5rem;
+    color: goldenrod;
+    margin-bottom: 15px;
+  }
+  
+  .reservation-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+  }
+  
+  .interior-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+ .reservation-button {
+    display: inline-block;
+    background-color: orange;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.reservation-button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+  
+  
+  .reservation-button:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #222;
+    color: white;
+    
+  }
+    .rr {
+        color: goldenrod;
+        font-size: 1.05rem;
+        margin-bottom: 36px;   /* Increased for more space */
+        margin-top: 10px;
+        text-align: center;
+        padding: 12px 18px;
+        background: rgba(218, 165, 32, 0.07);
+        border-radius: 8px;
+        display: block;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        font-style: italic;
+        box-shadow: 0 2px 8px rgba(218, 165, 32, 0.08);
+    }
+
+    @media (max-width: 700px) {
+        nav ul {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          overflow-x: auto;
+          padding: 0 5px;
+          white-space: nowrap;
+        }
+        nav ul li {
+          flex: 0 0 auto;
+        }
+        nav ul li a {
+          font-size: 14px;
+          padding: 6px 8px;
+        }
+      }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Delux Bite</title>
+        <link rel="icon" type="image/png" href="assets/log.jpg" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/png" href="assets/log.jpg" />
+      </head>
+<body>
+
+  <!-- Logo and Navigation Bar -->
+  <div class="logo-nav-container">
+    
+    <nav>
+      <ul>
+        
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#Reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="second.html" class="feedback-link">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="home">
+    <div class="hero-content">
+      <h1>DELUX BITE</h1>
+      <h2>Delicious Food, Delivered Fast!</h2>
+    </div>
+  </header>
+
+  <!-- Feedback / Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Feedback</h2>
+    <p>We value your feedback! Please fill out the form below to share your thoughts with us.</p>
+    
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <input type="hidden" name="access_key" value="83cd239f-766a-4db5-ab61-979a0275bb33" />
+      
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+      <label for="number">Phone Number</label>
+      <input type="number" id="number" name="number" placeholder="Enter your Phone number" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Delux Bite. All rights reserved.</p>
+  </footer>
+</body>
+</html>
