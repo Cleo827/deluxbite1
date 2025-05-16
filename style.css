@@ -98,7 +98,7 @@ nav ul li a:hover {
     font-size: 4rem;
     color: #fff;
     text-shadow: 0 0 8px #ff00ff, 0 0 12px #ff00ff;
-    animation: glowZoom 3s ease-in-out infinite;
+    
 }
 
 @keyframes glowZoom {
